@@ -1,0 +1,479 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* font-family: 'Overpass', sans-serif; */
+    /* font-family: 'Ubuntu', sans-serif; */
+}
+
+body{
+    font-size:16px;
+}
+
+header{
+    border: 1px solid transparent;
+    background: hsl(356, 100%, 66%) url(/images/bg-pattern-intro.svg) 36% 50%/180%;
+    min-height: 22rem;
+    color:hsl(0, 0%, 100%);
+    filter: inver(1);
+    font-family: 'Overpass', sans-serif;
+    border-radius: 0 0 0 4.5rem;
+}
+.top-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 1rem 0 1rem;
+    position:relative;
+}
+
+.logo{
+    /* border:1px solid green; */
+}
+.borgir{
+    display: none;
+}
+.intro{
+    text-align: center;
+    margin: 5rem 0 0 0;
+}
+.intro p{
+    margin:1rem;
+    font-size: 0.8rem;
+}
+.start a{
+    text-decoration: none;
+    color:unset;
+    /* border: 1px solid hsl(0, 0%, 100%); */
+    padding: 0.6rem 0.6rem;
+    border-radius: 1.2rem;
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
+    font-weight: bolder;
+}
+.start a:hover{
+    background-color: hsl(0, 0%, 100%);
+    color:hsl(356, 100%, 66%);
+}
+.menu{
+    display: flex;
+    align-items: stretch;
+    flex:0.7;
+    font-size: 0.8rem;
+    font-weight: 600;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+}
+.menu:hover{
+
+}
+.item{
+    list-style-type: none;
+    margin: 0.5rem 1rem 0;
+    /* border:1px solid blue; */
+    position:relative;
+}
+.item p:hover{
+    text-decoration: underline;
+}
+
+.logo img{
+    max-width:4rem;
+    height:auto;
+}
+.item p{
+    position: relative;
+    display: inline-block;
+}
+.item p::after{
+    content:'';
+    background: url(/images/icon-arrow-light.svg) no-repeat;
+    position:absolute;
+    top: 4px;
+    right: -18px;
+    width:1rem;
+    height:1rem;
+}
+.dropdown{
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(240, 10%, 16%);
+    list-style-type: none;
+    font-weight: 300;
+    padding: 0.6rem 1rem 0.6rem 0.4rem;
+    box-shadow: 0.2rem 0.2rem 1rem hsl(240deg 10% 16% / 40%);
+    border-radius: 0.4rem;
+    top: 1.5rem;
+    display:none;
+}
+.dropdown:hover{
+
+}
+.prodwidth{
+    min-width: 8.5rem;
+    right:-4rem;
+}
+.appear{
+    display: unset;
+}
+.disappear{
+    display:none;
+}
+.comwidth{
+    min-width: 6.5rem;
+    right: -1.8rem;
+}
+.contwidth{
+    min-width: 7rem;
+    right: -3rem;
+}
+.dditem{
+    padding:0.2rem 0.6rem;
+    border-radius: 0.4rem;
+}
+.dditem:hover{
+    font-weight: 600;
+}
+
+
+.items{
+    display: flex;
+    /* border: 1px solid green; */
+    margin: 0 0 0 1rem;
+    align-items: stretch;
+    position: relative;
+}
+.signins{
+    display: flex;
+    /* border:1px solid green; */
+}
+.signins a{
+    text-decoration: none;
+    color:unset;
+    padding: 0.6rem 1.6rem;
+    border-radius: 1.2rem;
+}
+a.shine{
+    background-color: hsl(0, 0%, 100%);
+    color:hsl(356, 100%, 66%);
+}
+a.shine:hover{
+    background-color: hsla(0, 0%, 100%,0.2);
+    color:hsl(0, 0%, 100%);
+}
+.signins a:hover{
+    background-color: hsla(0, 0%, 100%,0.2);
+    color:hsl(0, 0%, 100%);
+}
+
+.editor-section{
+    font-family: 'Overpass', sans-serif;
+    color: hsl(240, 10%, 16%);
+    margin: 2rem 0rem;
+    min-height: 46rem;
+    position: relative;
+    background: url(/images/illustration-editor-desktop.svg) no-repeat left 55vw top 0vh/contain;
+}
+
+.content{
+    display: flex;
+    margin: 7rem 4rem;
+}
+
+.editor-section h1{
+    text-align: center;
+    padding: 4rem 0 0 0;
+}
+
+.infos{
+    /* border: 1px solid grey; */
+    flex: 1 0 0;
+    padding: 2rem 6rem 2rem 0;
+}
+@media only screen and (max-width:800px) {
+    .infos{
+        /* border: 1px solid grey; */
+        flex: 1 0 0;
+        padding: 0rem 0rem 2rem 0;
+    }   
+}
+.description {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    padding: 0.5rem 0;
+}
+.title {
+    padding: 0.5rem 0rem;
+}
+.editor{
+    /* border:1px solid grey; */
+    flex:1 0 0;
+}
+/* .editor-section::after{
+    content: '';
+    position: absolute;
+    background: url(/images/illustration-editor-desktop.svg) no-repeat 27% 61%/101%;
+    width: 50rem;
+    height: 50rem;
+    top: -3.5rem;
+    right: -15rem;
+    z-index: 1;
+} */
+
+.mobile-section{
+    display: flex;
+    /* border: 1px solid grey; */
+    font-family: 'Overpass', sans-serif;
+    background: hsl(208, 49%, 24%) url(/images/bg-pattern-circles.svg) no-repeat -41% 78%/66%;
+    color: hsl(0, 0%, 100%);
+    border-radius: 0 4rem 0 4rem;
+    min-height: 18rem;
+    position:relative;
+}
+
+.mobile{
+    flex:1;
+    /* border: 1px solid grey; */
+    position: relative;
+}
+.mobile>img{
+    display: none;
+}
+.editor>img{
+    display: none;
+}
+.mobile::after{
+    content: '';
+    position: absolute;
+    background: url(/images/illustration-phones.svg) no-repeat center -167%/cover;
+    /* border: 1px solid green; */
+    width: 26.5rem;
+    height: 26.7rem;
+    top: -7rem;
+    left: 4rem;
+    z-index: 1;
+}
+
+.mobile-section .content{
+    flex: 1;
+    flex-direction: column;
+    margin: 4rem;
+    padding: 0 0 0 3rem;
+    /* border: 1px solid grey; */
+}
+
+
+.laptop-section{
+    font-family: 'Overpass', sans-serif;
+    color: hsl(240, 10%, 16%);
+    margin: 2rem 0rem;
+    min-height: 42rem;;
+    position: relative;
+    background: url(/images/illustration-laptop-desktop.svg) no-repeat right 53vw top 0vh/contain;
+}
+
+.laptop-section .content {
+    padding: 11rem 0;
+    margin: 0px 4rem;
+}
+.laptop-section .content .infos{
+    /* border: 1px solid grey; */
+    flex: 1 0 0;
+    padding: 2rem 0rem 2rem 0;
+}
+footer{
+    background-color: hsl(240, 10%, 16%);
+    display:flex;
+    justify-content: space-evenly;
+    color:hsl(240, 2%, 79%);
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.7rem;
+    padding:4rem;
+    border-radius: 0 4.5rem 0 0;
+}
+footer .logo{
+    margin:0;
+}
+.foo .foo-topic{
+    margin:0 0 1rem 0;
+    font-weight: 600;
+    color:hsl(0, 0%, 100%);
+}
+.foo .foo-item{
+   padding:0 0 0.5rem 0; 
+}
+
+@media only screen and (max-width:900px){
+    .top-bar{
+        justify-content: space-between;
+    }
+    .menu{
+        flex:1;
+    }
+    
+    .signins {
+        margin: 0;
+    }   
+    .content{
+        margin:7rem 0rem;
+        
+    }
+    .laptop-section .content{
+        padding: 9rem 0;
+        margin:0 0rem;
+    }
+    .mobile::after{
+        top: -3rem;
+        left: 1rem;
+        width: 21.5rem;
+        height: 25.7rem;
+    }
+
+} 
+
+@media only screen and (max-width:700px){
+    .menu{
+        flex-direction: column;
+        flex:0;
+        position:absolute;
+        top:2rem;
+        right:0;
+        background-color: hsl(0, 0%, 100%);
+        color:hsl(240, 10%, 16%);
+        padding:0.5rem;
+        text-align: center;
+        width:13rem;
+        border-radius:0.3rem;
+        box-shadow: 0.2rem 0.2rem 2rem hsl(240deg 10% 16% / 40%);;
+    }
+    
+    .items{
+        flex-direction: column;
+        margin:0;
+        padding: 0.4rem 0;
+        border-bottom: 1px solid hsla(207, 13%, 34%,0.4);
+    }
+    .item{
+        /* border: 1px solid green; */
+        margin: 0 0rem;
+        padding: 0.6rem 0;
+    }
+    .item p::after{
+        background: url(/images/icon-arrow-dark.svg) no-repeat;
+    }
+    .dropdown {
+        position: unset;
+        padding: 0.4rem 0rem;
+        box-shadow: unset;
+        width: 100%;
+        background-color: rgba(109, 157, 199, 0.1);
+        border-radius: 0.2rem;
+    }
+    .appear{
+        display: block;
+    }
+    .signins{
+        flex-direction: column;
+        padding: 0.5rem 1.8rem;
+        text-align: center;
+        border:none;
+    }
+    .signins a{
+        color: hsl(240, 10%, 16%);
+    }
+    .signins > a.shine{
+        color: hsl(0, 0%, 100%);
+        background-image: linear-gradient(to right,hsl(13, 100%, 72%),hsl(356, 100%, 66%));
+    }
+    .borgir{
+        display: unset;
+    }
+    .editor-section{
+        background:unset;
+        text-align: center;
+    }
+    .editor-section h1{
+        padding: 2rem 0 0 0;
+    }
+    .mobile-section{
+        flex-direction: column;
+        text-align: center;
+        position:relative;
+    }
+    .laptop-section{
+        background: unset;
+        text-align: center;
+    }
+    .mobile-section .content{
+        flex: 0;
+        margin: unset;
+        padding: 13.4rem 2.8rem 3rem;
+        /* border: 1px solid grey; */
+    }
+    .description{
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+        padding: 0.5rem 0;
+    }
+    .content{
+        flex-direction: column-reverse;
+        margin: 3rem 1rem 11rem;
+    }
+    .infos{
+        padding: 2rem 3.1rem;
+    }
+    .editor>img{
+        max-width:100%;
+        height:auto;
+        display: block;
+        margin:auto;
+    }
+    .mobile{
+    position: absolute;
+    max-width: 24rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: -11rem;
+    }
+    .mobile::after{
+        /* position: absolute;
+        content: '';
+        background: url(/images/illustration-phones.svg) no-repeat center center/cover;
+        width: 80%;
+        height: 100%;
+        left: 10%;
+        right: 10%; */
+        display: none;
+    }
+    .mobile>img{
+        max-width:100%;
+        height:auto;
+        display: block;
+    }
+    .laptop-section .content{
+        flex-direction: column;
+        padding: 0;
+    }
+}
+@media only screen and (max-width:500px){
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    .foo{
+        margin:1rem 0;
+    }
+    footer .logo {
+        margin: 2rem 0;
+    }
+}
+@media only screen and (max-width:350px){
+    .mobile-section .content{
+        padding: 13.4rem 2.8rem 3rem;
+    }
+    .mobile{
+        top:-7rem;
+    }
+}
